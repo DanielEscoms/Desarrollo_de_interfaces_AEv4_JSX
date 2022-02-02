@@ -9,7 +9,12 @@ const nombre = nombreCompleto => {
 const datos = labelText => {
   return (
     <View style={estilo === 'florida' ? styles.florida : styles.upv}>
-      <TextInput left={<TextInput.Icon name='eye' />} label={labelText} />
+      <TextInput
+        left={<TextInput.Icon name='eye' />}
+        label={labelText}
+        placeholder='placeholder'
+        placeholderTextColor={estilo === 'florida' ? 'white' : 'orange'}
+      />
       <TextInput></TextInput>
     </View>
   );
