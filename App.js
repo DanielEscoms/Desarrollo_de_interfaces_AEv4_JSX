@@ -1,9 +1,13 @@
 import React, {Component} from 'react';
 import {StyleSheet, View, Text} from 'react-native';
 
+const nombre = nombreCompleto => {
+  return <Text>{nombreCompleto}</Text>;
+};
+
 class App extends Component {
   render() {
-    return <></>;
+    return <>{nombre('Daniel Escoms Donate')}</>;
   }
 }
 
