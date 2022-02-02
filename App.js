@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
-import { TextInput } from 'react-native-paper';
+import { Button, TextInput } from 'react-native-paper';
 
 const nombre = nombreCompleto => {
   return <Text>{nombreCompleto}</Text>;
@@ -15,12 +15,28 @@ const datos = labelText => {
         placeholder='placeholder'
         placeholderTextColor={estilo === 'florida' ? 'white' : 'orange'}
       />
-      <TextInput></TextInput>
+      <TextInput
+        left={<TextInput.Icon name='eye' />}
+        label={labelText}
+        placeholder='placeholder'
+        placeholderTextColor={estilo === 'florida' ? 'white' : 'orange'}
+      />
     </View>
   );
 };
 
+const botonInformes = () =>{
+  return (
+    <Button
+      icon='format-list-bulleted'
+      mode='contained'
+    >Informes
+    </Button>
+  );
+};
+
 const estilo = 'florida';
+const isAdmin = true;
 
 class App extends Component {
   render() {
@@ -28,6 +44,7 @@ class App extends Component {
       <>
         {nombre('Daniel Escoms Donate')}
         {datos('Introduce tus datos')}
+        {isAdmin ? botonInformes() : null}
       </>
     );
   }
