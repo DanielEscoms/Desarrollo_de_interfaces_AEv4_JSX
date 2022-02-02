@@ -1,8 +1,13 @@
 import React, {Component} from 'react';
 import {StyleSheet, View, Text} from 'react-native';
+import {TextInput} from 'react-native-paper';
 
 const nombre = nombreCompleto => {
   return <Text>{nombreCompleto}</Text>;
+};
+
+const datos = () => {
+  return <TextInput></TextInput>;
 };
 
 class App extends Component {
