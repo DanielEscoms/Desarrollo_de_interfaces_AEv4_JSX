@@ -1,18 +1,28 @@
-import React, {Component} from 'react';
-import {StyleSheet, View, Text} from 'react-native';
-import {TextInput} from 'react-native-paper';
+import React, { Component } from 'react';
+import { StyleSheet, View, Text } from 'react-native';
+import { TextInput } from 'react-native-paper';
 
 const nombre = nombreCompleto => {
   return <Text>{nombreCompleto}</Text>;
 };
 
-const datos = () => {
-  return <TextInput></TextInput>;
+const datos = labelText => {
+  return (
+    <View>
+      <TextInput left={<TextInput.Icon name='eye' />} label={labelText} />
+      <TextInput></TextInput>
+    </View>
+  );
 };
 
 class App extends Component {
   render() {
-    return <>{nombre('Daniel Escoms Donate')}</>;
+    return (
+      <>
+        {nombre('Daniel Escoms Donate')}
+        {datos('Introduce tus datos')}
+      </>
+    );
   }
 }
 
