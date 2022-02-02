@@ -8,12 +8,14 @@ const nombre = nombreCompleto => {
 
 const datos = labelText => {
   return (
-    <View>
+    <View style={estilo === 'florida' ? styles.florida : styles.upv}>
       <TextInput left={<TextInput.Icon name='eye' />} label={labelText} />
       <TextInput></TextInput>
     </View>
   );
 };
+
+const estilo = 'florida';
 
 class App extends Component {
   render() {
